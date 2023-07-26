@@ -11,5 +11,5 @@ getDataFromInternet() async {
   var res = await http.get(url);
   var resobj = jsonDecode(res.body);
   //resobj is a list of map<string, dynamic>
-  print(resobj);
+  print(resobj[0]);
 }
