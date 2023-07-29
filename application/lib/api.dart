@@ -11,5 +11,6 @@ getDataFromInternet() async {
   var res = await http.get(url);
   var resobj = jsonDecode(res.body);
   //resobj is a list of map<string, dynamic>
-  print(resobj[0]);
+  //so basically we have to use list access commands to see the number of responses returned
+  print(resobj[0]['name'].runtimeType);
 }
